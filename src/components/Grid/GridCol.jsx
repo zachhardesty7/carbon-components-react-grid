@@ -9,34 +9,35 @@ import PropTypes from 'prop-types'
 // TODO: add `--aspect-ratio--object` prop
 // NOTE: https://github.com/carbon-design-system/carbon-elements/blob/master/packages/grid/scss/_mixins.scss
 export const GridCol = ({
-  sm,
-  md,
-  lg,
-  xlg,
-  max,
-  className,
-  children,
+	sm,
+	md,
+	lg,
+	xlg,
+	max,
+	className,
+	children,
 }) => (
-  <div
-    className={cx(
-      'bx--col',
-      sm && `bx--col-sm-${sm === 'auto' ? '-' : ''}${sm}`,
-      md && `bx--col-md-${sm === 'auto' ? '-' : ''}${md}`,
-      lg && `bx--col-lg-${sm === 'auto' ? '-' : ''}${lg}`,
-      xlg && `bx--col-xlg-${sm === 'auto' ? '-' : ''}${xlg}`,
-      max && `bx--col-max-${sm === 'auto' ? '-' : ''}${max}`,
-      className
-    )}
-  >
-    {children}
-  </div>
+	<div
+		className={cx(
+			'bx--col',
+			sm && `bx--col-sm-${sm === 'auto' ? '-' : ''}${sm}`,
+			md && `bx--col-md-${sm === 'auto' ? '-' : ''}${md}`,
+			lg && `bx--col-lg-${sm === 'auto' ? '-' : ''}${lg}`,
+			xlg && `bx--col-xlg-${sm === 'auto' ? '-' : ''}${xlg}`,
+			max && `bx--col-max-${sm === 'auto' ? '-' : ''}${max}`,
+			className
+		)}
+	>
+		{children}
+	</div>
 )
 
 GridCol.propTypes = {
-  sm: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  md: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  lg: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  xlg: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  max: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  children: PropTypes.node,
+	sm: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+	md: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+	lg: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+	xlg: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+	max: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+	className: PropTypes.string,
+	children: PropTypes.node,
 }
