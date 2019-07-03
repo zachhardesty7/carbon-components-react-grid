@@ -1,10 +1,16 @@
 import React from 'react'
 import cx from 'classnames'
 
-const Grid = ({ fullWidth, condensed, children }) => (
-  <div className={cx('bx--grid', fullWidth && 'bx--grid--full-width', condensed && 'bx--grid--condensed')}>
+import { GridCol } from './GridCol'
+import { GridRow } from './GridRow'
+
+export const Grid = ({
+  fullWidth, condensed, className, children,
+}) => (
+  <div className={cx('bx--grid', fullWidth && 'bx--grid--full-width', condensed && 'bx--grid--condensed', className)}>
     {children}
   </div>
 )
 
-export default Grid
+Grid.Col = GridCol
+Grid.Row = GridRow

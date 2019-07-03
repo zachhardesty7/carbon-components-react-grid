@@ -8,12 +8,13 @@ import PropTypes from 'prop-types'
 // TODO: add `--aspect-ratio--{width}x{right}` prop
 // TODO: add `--aspect-ratio--object` prop
 // NOTE: https://github.com/carbon-design-system/carbon-elements/blob/master/packages/grid/scss/_mixins.scss
-const GridCol = ({
+export const GridCol = ({
   sm,
   md,
   lg,
   xlg,
   max,
+  className,
   children,
 }) => (
   <div
@@ -24,6 +25,7 @@ const GridCol = ({
       lg && `bx--col-lg-${sm === 'auto' ? '-' : ''}${lg}`,
       xlg && `bx--col-xlg-${sm === 'auto' ? '-' : ''}${xlg}`,
       max && `bx--col-max-${sm === 'auto' ? '-' : ''}${max}`,
+      className
     )}
   >
     {children}
@@ -38,5 +40,3 @@ GridCol.propTypes = {
   max: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
   children: PropTypes.node,
 }
-
-export default GridCol
