@@ -1,19 +1,24 @@
 {
-  "name": "carbon-components-react-grid",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.0.1",
-    "eslint-config-hardesty": "^1.1.2"
-  },
-  "eslintConfig": {
-    "extends": "hardesty"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6"
-  }
+	"name": "carbon-components-react-grid",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"babel-eslint": "^10.0.2",
+		"eslint": "^6.0.1",
+		"eslint-config-hardesty": "^1.1.2"
+	},
+	"eslintConfig": {
+		"extends": "hardesty"
+	},
+	"dependencies": {
+		"classnames": "^2.2.6",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.6"
+	},
+	"peerDependencies": {
+		"classnames": "^2.2.6",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.6"
+	}
 }
