@@ -35,10 +35,39 @@ export const GridCol = ({
 )
 
 GridCol.propTypes = {
+	/**
+	 * screen size <= 320px
+	 *
+	 * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
+	 */
 	sm: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+
+	/**
+  * screen size <= 672px
+  *
+  * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
+  */
 	md: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+
+	/**
+  * screen size <= 1056px
+  *
+  * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
+  */
 	lg: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+
+	/**
+  * screen size <= 1312px
+  *
+  * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
+  */
 	xlg: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+
+	/**
+  * screen size <= 1584px
+  *
+  * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
+  */
 	max: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
 	gutter: PropTypes.oneOf([false, true, 'left', 'right']),
 	hang: PropTypes.oneOf([false, 'left', 'right']),
