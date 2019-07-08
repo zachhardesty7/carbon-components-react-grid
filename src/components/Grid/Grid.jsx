@@ -7,6 +7,7 @@ import { GridRow } from './GridRow'
 
 // @TODO: test me so much
 export const Grid = ({
+	noGutter = false,
 	aspectRatio = undefined,
 	fullWidth = false,
 	condensed = false,
@@ -14,9 +15,13 @@ export const Grid = ({
 	children = null,
 }) => (
 	<div className={cx(
-		'bx--grid', fullWidth && 'bx--grid--full-width', condensed && 'bx--grid--condensed',
+		'bx--grid',
+		fullWidth && 'bx--grid--full-width',
+		condensed && 'bx--grid--condensed',
 		aspectRatio && 'bx--aspect-ratio',
 		aspectRatio && `bx--aspect-ratio--${aspectRatio[0]}x${aspectRatio[1]}`,
+		noGutter === true && 'bx--no-gutter',
+		noGutter !== true && noGutter && `bx--no-gutter--${noGutter}`,
 		className
 	)}
 	>
@@ -28,6 +33,7 @@ Grid.Col = GridCol
 Grid.Row = GridRow
 
 Grid.propTypes = {
+	noGutter: PropTypes.bool,
 	/** input: [width, height] */
 	aspectRatio: PropTypes.oneOf([16, 9], [2, 1], [4, 3], [1, 1]),
 	fullWidth: PropTypes.bool,

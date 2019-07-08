@@ -11,7 +11,7 @@ export const GridCol = ({
 	lg = '',
 	xlg = '',
 	max = '',
-	gutter = false,
+	noGutter = false,
 	hang = false,
 	className = '',
 	children = null,
@@ -24,8 +24,8 @@ export const GridCol = ({
 			lg && `bx--col-lg-${lg === 'auto' ? '-' : ''}${lg}`,
 			xlg && `bx--col-xlg-${xlg === 'auto' ? '-' : ''}${xlg}`,
 			max && `bx--col-max-${sm === 'auto' ? '-' : ''}${max}`,
-			gutter === true && 'bx--no-gutter',
-			gutter !== true && gutter && `bx--no-gutter--${gutter}`,
+			noGutter === true && 'bx--no-gutter',
+			noGutter !== true && noGutter && `bx--no-gutter--${noGutter}`,
 			hang && `bx--hang--${hang}`,
 			className
 		)}
@@ -36,40 +36,40 @@ export const GridCol = ({
 
 GridCol.propTypes = {
 	/**
-	 * screen size <= 320px
+	 * screen size >= 320px
 	 *
 	 * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
 	 */
-	sm: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+	sm: PropTypes.oneOf(['auto', '1', '2', '3', '4']),
 
 	/**
-  * screen size <= 672px
+  * screen size >= 672px
   *
   * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
   */
-	md: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+	md: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8']),
 
 	/**
-  * screen size <= 1056px
+  * screen size >= 1056px
   *
   * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
   */
 	lg: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
 
 	/**
-  * screen size <= 1312px
+  * screen size >= 1312px
   *
   * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
   */
 	xlg: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
 
 	/**
-  * screen size <= 1584px
+  * screen size >= 1584px
   *
   * @see https://www.carbondesignsystem.com/guidelines/layout#breakpoints
   */
 	max: PropTypes.oneOf(['auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-	gutter: PropTypes.oneOf([false, true, 'left', 'right']),
+	noGutter: PropTypes.oneOf([false, true, 'left', 'right']),
 	hang: PropTypes.oneOf([false, 'left', 'right']),
 	className: PropTypes.string,
 	children: PropTypes.node,
