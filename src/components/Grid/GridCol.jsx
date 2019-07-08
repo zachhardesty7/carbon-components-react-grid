@@ -9,13 +9,13 @@ import PropTypes from 'prop-types'
 // TODO: add `--aspect-ratio--object` prop
 // NOTE: https://github.com/carbon-design-system/carbon-elements/blob/master/packages/grid/scss/_mixins.scss
 export const GridCol = ({
-	sm,
-	md,
-	lg,
-	xlg,
-	max,
-	className,
-	children,
+	sm = '',
+	md = '',
+	lg = '',
+	xlg = '',
+	max = '',
+	className = '',
+	children = null,
 }) => (
 	<div
 		className={cx(
