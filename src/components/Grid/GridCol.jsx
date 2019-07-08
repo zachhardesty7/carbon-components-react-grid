@@ -2,7 +2,8 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-// TODO: add `--aspect-ratio--{width}x{right}` prop
+import './Grid.scss'
+
 // TODO: add `--aspect-ratio--object` prop
 // NOTE: https://github.com/carbon-design-system/carbon-elements/blob/master/packages/grid/scss/_mixins.scss
 export const GridCol = ({
