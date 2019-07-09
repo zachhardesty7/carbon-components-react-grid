@@ -34,7 +34,7 @@ Grid.Row = GridRow
 
 Grid.propTypes = {
 	noGutter: PropTypes.bool,
-	/** input: [width, height] */
+	/** input as [width, height] */
 	aspectRatio: PropTypes.oneOf([16, 9], [2, 1], [4, 3], [1, 1]),
 	fullWidth: PropTypes.bool,
 	condensed: PropTypes.bool,

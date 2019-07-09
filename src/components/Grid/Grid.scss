@@ -7,6 +7,19 @@ $xlg-min: 1312px;
 $xlg-max: 671px;
 $max-min: 671px;
 
+.bx--no-gutter .bx--row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.bx--no-gutter--left .bx--row {
+  margin-left: 0;
+}
+
+.bx--no-gutter--right .bx--row {
+  margin-right: 0;
+}
+
 @media only screen and (max-width: 671px) {
   .bx--col-sm-0 {
     display: none !important;
