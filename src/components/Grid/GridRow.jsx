@@ -14,6 +14,8 @@ export const GridRow = ({
 
 GridRow.propTypes = {
 	condensed: PropTypes.bool,
+	/** user defined classes to be merged into grid classes */
 	className: PropTypes.string,
+	/** arbitrary JSX */
 	children: PropTypes.node,
 }

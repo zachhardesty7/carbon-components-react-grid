@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { GridCol } from './GridCol'
 import { GridRow } from './GridRow'
 
+// functionality mostly handled by scss here: https://github.com/carbon-design-system/carbon-elements/blob/master/packages/grid/scss/_mixins.scss
 // @TODO: test me so much
 export const Grid = ({
 	noGutter = false,
@@ -33,11 +34,14 @@ Grid.Col = GridCol
 Grid.Row = GridRow
 
 Grid.propTypes = {
+	/** remove horizontal padding and negative margins on child rows */
 	noGutter: PropTypes.bool,
 	/** input as [width, height] */
 	aspectRatio: PropTypes.oneOf([16, 9], [2, 1], [4, 3], [1, 1]),
 	fullWidth: PropTypes.bool,
 	condensed: PropTypes.bool,
+	/** user defined classes to be merged into grid classes */
 	className: PropTypes.string,
+	/** arbitrary JSX */
 	children: PropTypes.node,
 }
