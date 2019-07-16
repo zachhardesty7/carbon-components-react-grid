@@ -1,12 +1,13 @@
 {
 	"name": "carbon-components-react-grid",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"main": "build/index.js",
 	"module": "build/index.js",
 	"license": "MIT",
 	"scripts": {
 		"build": "babel --presets @babel/preset-react src/components/Grid --out-dir build",
-		"prepublishOnly": "yarn build"
+		"copy": "babel src/components/Grid/grid.css --out-dir build --copy-files",
+		"prepublishOnly": "yarn build && yarn copy"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.5.0",
