@@ -1,9 +1,16 @@
 {
 	"name": "carbon-components-react-grid",
-	"version": "1.0.0",
-	"main": "index.js",
+	"version": "1.0.1",
+	"main": "build/index.js",
+	"module": "build/index.js",
 	"license": "MIT",
+	"scripts": {
+		"build": "babel --presets @babel/preset-react src/components/Grid --out-dir build"
+	},
 	"devDependencies": {
+		"@babel/cli": "^7.5.0",
+		"@babel/core": "^7.5.4",
+		"@babel/preset-react": "^7.0.0",
 		"babel-eslint": "^10.0.2",
 		"eslint": "^6.0.1",
 		"eslint-config-hardesty": "^1.1.2"
