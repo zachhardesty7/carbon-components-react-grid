@@ -22,7 +22,7 @@ export const Grid = ({
 		aspectRatio && 'bx--aspect-ratio',
 		aspectRatio && `bx--aspect-ratio--${aspectRatio[0]}x${aspectRatio[1]}`,
 		noGutter === true && 'bx--no-gutter',
-		noGutter !== true && noGutter && `bx--no-gutter--${noGutter}`,
+		noGutter !== true && noGutter && `bx--no-gutter--${noGutter}`, // 'left' || 'right'
 		className
 	)}
 	>
@@ -35,10 +35,12 @@ Grid.Row = GridRow
 
 Grid.propTypes = {
 	/** remove horizontal padding and negative margins on child rows */
-	noGutter: PropTypes.bool,
+	noGutter: PropTypes.oneOf(true, false, 'left', 'right'),
 	/** input as [width, height] */
 	aspectRatio: PropTypes.oneOf([16, 9], [2, 1], [4, 3], [1, 1]),
+	/** TODO: document */
 	fullWidth: PropTypes.bool,
+	/** TODO: document */
 	condensed: PropTypes.bool,
 	/** user defined classes to be merged into grid classes */
 	className: PropTypes.string,

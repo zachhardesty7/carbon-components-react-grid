@@ -75,6 +75,7 @@ GridCol.propTypes = {
 
 	/** disable spacing between columns on both horiz directions (true) or individually */
 	noGutter: PropTypes.oneOf([false, true, 'left', 'right']),
+	/** TODO: document */
 	hang: PropTypes.oneOf([false, 'left', 'right']),
 	/** user defined classes to be merged into grid classes */
 	className: PropTypes.string,

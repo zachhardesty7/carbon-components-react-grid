@@ -13,6 +13,7 @@ export const GridRow = ({
 )
 
 GridRow.propTypes = {
+	/** TODO: document */
 	condensed: PropTypes.bool,
 	/** user defined classes to be merged into grid classes */
 	className: PropTypes.string,
