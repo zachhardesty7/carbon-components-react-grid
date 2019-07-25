@@ -1,5 +1,4 @@
 /* // TODO: import sass variables from def files */
-
 :root {
   --sm-max: 671px;
   --md-min: 672px;
@@ -7,8 +6,8 @@
   --lg-min: 1055px;
   --lg-max: 1311px;
   --xlg-min: 1312px;
-  --xlg-max: 671px;
-  --max-min: 671px;
+  --xlg-max: 1583px;
+  --max-min: 1584px;
 }
 
 /* // manually remove negative margins of rows when removing horiz padding on grid */
@@ -26,31 +25,31 @@
 }
 
 /* // custom functionality for hiding zero column width cols */
-@media only screen and (max-width: 671px) {
+@media only screen and (max-width: var(sm-max)) {
   .bx--col-sm-0 {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 672px) and (max-width: 1055px) {
+@media only screen and (min-width: var(md-min)) and (max-width: var(md-max)) {
   .bx--col-md-0 {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 1056px) and (max-width: 1311px) {
+@media only screen and (min-width: var(lg-min)) and (max-width: var(lg-max)) {
   .bx--col-lg-0 {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 1312px) and (max-width: 1583px) {
+@media only screen and (min-width: var(xlg-min)) and (max-width: var(xlg-max)) {
   .bx--col-xlg-0 {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 1584px) {
+@media only screen and (min-width: var(max-min)) {
   .bx--col-max-0 {
     display: none !important;
   }
