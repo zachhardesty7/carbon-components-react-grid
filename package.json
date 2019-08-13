@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "babel --presets @babel/preset-react src/components/Grid --out-dir build && yarn copy",
-		"copy": "babel src/components/Grid/grid.css --out-dir build --copy-files",
+		"copy": "babel src/components/Grid/Grid.css --out-dir build --copy-files",
 		"prepublishOnly": "yarn build"
 	},
 	"devDependencies": {
