@@ -5,9 +5,9 @@
 	"module": "build/index.js",
 	"license": "MIT",
 	"scripts": {
-		"build": "babel --presets @babel/preset-react src/components/Grid --out-dir build",
+		"build": "babel --presets @babel/preset-react src/components/Grid --out-dir build && yarn copy",
 		"copy": "babel src/components/Grid/grid.css --out-dir build --copy-files",
-		"prepublishOnly": "yarn build && yarn copy"
+		"prepublishOnly": "yarn build"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.5.0",
