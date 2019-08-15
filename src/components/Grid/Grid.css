@@ -10,20 +10,6 @@
   --max-min: 1584px;
 }
 
-/* // manually remove negative margins of rows when removing horiz padding on grid */
-.bx--no-gutter .bx--row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.bx--no-gutter--left .bx--row {
-  margin-left: 0;
-}
-
-.bx--no-gutter--right .bx--row {
-  margin-right: 0;
-}
-
 /* // custom functionality for hiding zero column width cols */
 @media only screen and (max-width: var(sm-max)) {
   .bx--col-sm-0 {
